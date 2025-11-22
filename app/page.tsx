@@ -1,6 +1,7 @@
 "use client";
 
 import Loader from "@/src/components/elements/loader";
+import Terminal from "@/src/components/elements/terminal";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -14,10 +15,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center gap-4 py-2 px-4">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-black">
       {isLoading && (
         <Loader />
       )}
+      <Terminal />
     </div>
   );
 }
