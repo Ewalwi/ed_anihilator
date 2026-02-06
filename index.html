@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ED Inspector</title>
+    <meta name="description" content="Born to destroy" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="loader-container" id="loader">
+      <div class="loader-frame">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+
+        <div class="logo-wrapper">
+          <img src="public/YPlogo.png" alt="Cypher Vision Logo" class="main-logo" />
+          <img src="public/YP letters.png" alt="YP Letters" class="glitch-letters" />
+        </div>
+
+        <div class="text-wrapper">
+          <h1 class="title-text">ED ANHILILATOR</h1>
+          <p class="subtitle-text">by Cypher Vision</p>
+          <p class="loading-text">INITIALIZING...</p>
+        </div>
+      </div>
+    </div>
+
+    <main class="terminal" id="terminal">
+      <div class="terminal-output" id="terminal-output">
+        <div class="terminal-scroll" id="terminal-scroll">
+          <div class="terminal-messages" id="terminal-messages"></div>
+        </div>
+      </div>
+      <div class="terminal-input">
+        <span class="terminal-prompt">&gt;</span>
+        <input
+          type="text"
+          id="terminal-input"
+          autocomplete="off"
+          spellcheck="false"
+          aria-label="Terminal command input"
+        />
+      </div>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

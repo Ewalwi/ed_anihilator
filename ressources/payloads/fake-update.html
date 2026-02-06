@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Updating...</title>
+    <style>
+      body {
+        margin: 0;
+        background: #101820;
+        color: #f2f2f2;
+        font-family: system-ui, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .card {
+        padding: 28px 36px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.06);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        width: min(420px, 90vw);
+      }
+      .bar {
+        height: 12px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.15);
+        overflow: hidden;
+        margin-top: 16px;
+      }
+      .fill {
+        height: 100%;
+        width: 65%;
+        background: linear-gradient(90deg, #00ffa3, #00c2ff);
+        animation: pulse 1.2s infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Installing 47 critical updates</h2>
+      <p>Do not power off your banana.</p>
+      <div class="bar"><div class="fill"></div></div>
+      <p>Stuck at 65%? That's part of the prank.</p>
+    </div>
+  </body>
+</html>
