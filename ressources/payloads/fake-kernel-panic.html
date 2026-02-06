@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kernel Panic</title>
+    <style>
+      body {
+        margin: 0;
+        background: #0a0a0a;
+        color: #00ff7f;
+        font-family: "Courier New", monospace;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .terminal {
+        border: 2px solid #00ff7f;
+        padding: 24px 32px;
+        box-shadow: 0 0 20px rgba(0, 255, 127, 0.4);
+      }
+      .blink {
+        animation: blink 1s steps(2, start) infinite;
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="terminal">
+      <div>*** KERNEL PANIC - NOT A REAL ERROR ***</div>
+      <div>Process: banana-daemon (pid 42)</div>
+      <div>Reason: too much potassium in stack frame</div>
+      <div class="blink">Rebooting into safe peel mode...</div>
+    </div>
+  </body>
+</html>

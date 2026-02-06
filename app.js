@@ -5,6 +5,190 @@ const terminalOutput = document.getElementById("terminal-output");
 
 const embeddedPayloads = {
   "ressources/payloads/test.html": "<div>Test Payload</div>",
+  "ressources/payloads/banana-mode.html": `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Banana Mode</title>
+    <style>
+      body {
+        margin: 0;
+        background: #111;
+        color: #ffe135;
+        font-family: "Comic Sans MS", "Comic Sans", system-ui, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+      }
+      .card {
+        border: 3px dashed #ffe135;
+        padding: 32px 40px;
+        border-radius: 16px;
+        box-shadow: 0 0 25px rgba(255, 225, 53, 0.5);
+        animation: wiggle 1.5s infinite;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: 2.5rem;
+        letter-spacing: 0.2rem;
+      }
+      p {
+        margin: 0;
+        font-size: 1.1rem;
+      }
+      @keyframes wiggle {
+        0%, 100% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(1deg);
+        }
+        50% {
+          transform: rotate(-1deg);
+        }
+        75% {
+          transform: rotate(1.5deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>🍌 BANANA MODE 🍌</h1>
+      <p>Your system is now 82% more potassium.</p>
+    </div>
+  </body>
+</html>`,
+  "ressources/payloads/fake-kernel-panic.html": `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kernel Panic</title>
+    <style>
+      body {
+        margin: 0;
+        background: #0a0a0a;
+        color: #00ff7f;
+        font-family: "Courier New", monospace;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .terminal {
+        border: 2px solid #00ff7f;
+        padding: 24px 32px;
+        box-shadow: 0 0 20px rgba(0, 255, 127, 0.4);
+      }
+      .blink {
+        animation: blink 1s steps(2, start) infinite;
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="terminal">
+      <div>*** KERNEL PANIC - NOT A REAL ERROR ***</div>
+      <div>Process: banana-daemon (pid 42)</div>
+      <div>Reason: too much potassium in stack frame</div>
+      <div class="blink">Rebooting into safe peel mode...</div>
+    </div>
+  </body>
+</html>`,
+  "ressources/payloads/rainbow-matrix.html": `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rainbow Matrix</title>
+    <style>
+      body {
+        margin: 0;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: "Courier New", monospace;
+      }
+      .matrix {
+        font-size: 2rem;
+        letter-spacing: 0.4rem;
+        animation: glow 2s infinite;
+      }
+      .matrix span:nth-child(1) { color: #ff004c; }
+      .matrix span:nth-child(2) { color: #ff7a00; }
+      .matrix span:nth-child(3) { color: #ffe500; }
+      .matrix span:nth-child(4) { color: #3cff00; }
+      .matrix span:nth-child(5) { color: #00e5ff; }
+      .matrix span:nth-child(6) { color: #7b00ff; }
+      @keyframes glow {
+        0%, 100% { text-shadow: 0 0 10px currentColor; }
+        50% { text-shadow: 0 0 25px currentColor; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="matrix">
+      <span>H</span><span>A</span><span>C</span><span>K</span><span>E</span><span>D</span>
+    </div>
+  </body>
+</html>`,
+  "ressources/payloads/fake-update.html": `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Updating...</title>
+    <style>
+      body {
+        margin: 0;
+        background: #101820;
+        color: #f2f2f2;
+        font-family: system-ui, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .card {
+        padding: 28px 36px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.06);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        width: min(420px, 90vw);
+      }
+      .bar {
+        height: 12px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.15);
+        overflow: hidden;
+        margin-top: 16px;
+      }
+      .fill {
+        height: 100%;
+        width: 65%;
+        background: linear-gradient(90deg, #00ffa3, #00c2ff);
+        animation: pulse 1.2s infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Installing 47 critical updates</h2>
+      <p>Do not power off your banana.</p>
+      <div class="bar"><div class="fill"></div></div>
+      <p>Stuck at 65%? That's part of the prank.</p>
+    </div>
+  </body>
+</html>`,
 };
 
 class CommandSystem {
